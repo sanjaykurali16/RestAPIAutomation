@@ -23,15 +23,15 @@ import lombok.extern.jackson.Jacksonized;
 public class Posts {
 
   @JsonProperty("userId")
-  private Object userId;
+  private Integer userId;
 
   @JsonProperty("id")
   private Integer id;
 
   @JsonProperty("title")
-  private Integer title;
+  private String title;
 
   @JsonProperty("body")
-  private Integer body;
+  private String body;
 
 }

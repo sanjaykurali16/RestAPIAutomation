@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Report" duration-ms="5207" started-at="2022-06-12T19:17:34 IST" finished-at="2022-06-12T19:17:39 IST">
+  <suite name="Automation Test Report" duration-ms="18509" started-at="2022-06-12T21:25:43 IST" finished-at="2022-06-12T21:26:02 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Automation Test Report" duration-ms="5207" started-at="2022-06-12T19:17:34 IST" finished-at="2022-06-12T19:17:39 IST">
+    <test name="Automation Test Report" duration-ms="18509" started-at="2022-06-12T21:25:43 IST" finished-at="2022-06-12T21:26:02 IST">
       <class name="com.test.testrunner.TestRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="setUpClass" is-config="true" duration-ms="769" started-at="2022-06-12T19:17:34 IST" finished-at="2022-06-12T19:17:35 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="setUpClass" is-config="true" duration-ms="799" started-at="2022-06-12T21:25:43 IST" finished-at="2022-06-12T21:25:44 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@383864d5]]>
+                <![CDATA[org.testng.TestRunner@fd53053]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" duration-ms="4146" started-at="2022-06-12T19:17:35 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-12T19:17:39 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" duration-ms="17493" started-at="2022-06-12T21:25:44 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-12T21:26:02 IST">
           <params>
             <param index="0">
               <value>
@@ -34,21 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.java.PendingException">
-            <message>
-              <![CDATA[TODO: implement me]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
-at com.test.stepdef.VerifyEmail.search_for_the_post_with_user_id(VerifyEmail.java:44)
-at ✽.Search for the post with user Id(file:///C:/Users/sanja/Desktop/Eclipse_Workspace/RestAPIAutomation/features/verifyEmail.feature:11)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.PendingException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="tearDownClass" is-config="true" duration-ms="226" started-at="2022-06-12T19:17:39 IST" finished-at="2022-06-12T19:17:39 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="tearDownClass" is-config="true" duration-ms="167" started-at="2022-06-12T21:26:02 IST" finished-at="2022-06-12T21:26:02 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

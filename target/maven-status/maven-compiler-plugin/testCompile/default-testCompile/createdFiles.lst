@@ -9,6 +9,4 @@ com\test\pojo\Users$UsersBuilder.class
 com\test\restapi\ResponseBuilder.class
 com\test\pojo\Company$CompanyBuilder.class
 com\test\pojo\Company.class
-com\test\pojo\Followers.class
-com\test\pojo\InnerError.class
 com\test\pojo\Users.class
