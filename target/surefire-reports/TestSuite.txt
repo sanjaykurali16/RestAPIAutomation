@@ -1,21 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.534 s <<< FAILURE! - in TestSuite
-com.test.testrunner.TestRunner.runScenario  Time elapsed: 4.25 s  <<< FAILURE!
-com.fasterxml.jackson.core.JsonParseException: 
-Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
- at [Source: (String)"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-tomorrow.min.css" />
-<title>JSONPlaceholder - Free Fake REST API</title>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN"></script>
-<script>
-      window.dataLayer = window.dataL"[truncated 6687 chars]; line: 2, column: 2]
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.011 s - in TestSuite

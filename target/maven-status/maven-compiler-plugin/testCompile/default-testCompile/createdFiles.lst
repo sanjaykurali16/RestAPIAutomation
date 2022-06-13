@@ -1,12 +1,15 @@
+com\test\pojo\Comments.class
 com\test\pojo\Geo.class
 com\test\restapi\RestResource.class
 com\test\pojo\Address$AddressBuilder.class
 com\test\stepdef\VerifyEmail.class
+com\test\pojo\Posts.class
 com\test\testrunner\TestRunner.class
 com\test\pojo\Geo$GeoBuilder.class
 com\test\pojo\Address.class
+com\test\pojo\Comments$CommentsBuilder.class
 com\test\pojo\Users$UsersBuilder.class
-com\test\restapi\ResponseBuilder.class
 com\test\pojo\Company$CompanyBuilder.class
 com\test\pojo\Company.class
+com\test\pojo\Posts$PostsBuilder.class
 com\test\pojo\Users.class

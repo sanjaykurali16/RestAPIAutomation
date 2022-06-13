@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Automation Test Report" duration-ms="5317" started-at="2022-06-13T20:34:27 IST" finished-at="2022-06-13T20:34:32 IST">
+  <suite name="Automation Test Report" duration-ms="21773" started-at="2022-06-13T20:45:06 IST" finished-at="2022-06-13T20:45:28 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Automation Test Report" duration-ms="5317" started-at="2022-06-13T20:34:27 IST" finished-at="2022-06-13T20:34:32 IST">
+    <test name="Automation Test Report" duration-ms="21773" started-at="2022-06-13T20:45:06 IST" finished-at="2022-06-13T20:45:28 IST">
       <class name="com.test.testrunner.TestRunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="setUpClass" is-config="true" duration-ms="827" started-at="2022-06-13T20:34:27 IST" finished-at="2022-06-13T20:34:28 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="setUpClass" is-config="true" duration-ms="1018" started-at="2022-06-13T20:45:06 IST" finished-at="2022-06-13T20:45:07 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@715d6168]]>
+                <![CDATA[org.testng.TestRunner@fd53053]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" duration-ms="4234" started-at="2022-06-13T20:34:28 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-13T20:34:32 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="runScenario" duration-ms="20502" started-at="2022-06-13T20:45:08 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-06-13T20:45:28 IST">
           <params>
             <param index="0">
               <value>
@@ -34,56 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="com.fasterxml.jackson.core.JsonParseException">
-            <message>
-              <![CDATA[Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
- at [Source: (String)"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-tomorrow.min.css" />
-<title>JSONPlaceholder - Free Fake REST API</title>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN"></script>
-<script>
-      window.dataLayer = window.dataL"[truncated 6687 chars]; line: 2, column: 2]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.fasterxml.jackson.core.JsonParseException: Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
- at [Source: (String)"
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/themes/prism-tomorrow.min.css" />
-<title>JSONPlaceholder - Free Fake REST API</title>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E3C3GCQVBN"></script>
-<script>
-      window.dataLayer = window.dataL"[truncated 6687 chars]; line: 2, column: 2]
-at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:2391)
-at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:735)
-at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:659)
-at com.fasterxml.jackson.core.json.ReaderBasedJsonParser._handleOddValue(ReaderBasedJsonParser.java:2005)
-at com.fasterxml.jackson.core.json.ReaderBasedJsonParser.nextToken(ReaderBasedJsonParser.java:802)
-at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:4761)
-at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4667)
-at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3629)
-at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3597)
-at com.test.stepdef.VerifyEmail.search_for_user_with_name(VerifyEmail.java:41)
-at ✽.Search for user with name "Samantha"(file:///C:/Users/sanja/Desktop/Eclipse_Workspace/RestAPIAutomation/features/verifyEmail.feature:10)
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.fasterxml.jackson.core.JsonParseException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="tearDownClass" is-config="true" duration-ms="194" started-at="2022-06-13T20:34:32 IST" finished-at="2022-06-13T20:34:32 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.test.testrunner.TestRunner@1a3869f4]" name="tearDownClass" is-config="true" duration-ms="189" started-at="2022-06-13T20:45:28 IST" finished-at="2022-06-13T20:45:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
