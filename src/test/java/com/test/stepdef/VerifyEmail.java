@@ -1,24 +1,21 @@
 package com.test.stepdef;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.regex.Pattern;
-
-import org.testng.asserts.SoftAssert;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.test.pojo.Comments;
 import com.test.pojo.Posts;
 import com.test.pojo.Users;
 import com.test.restapi.RestResource;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
+import org.testng.asserts.SoftAssert;
 
 /**
- * Represents a student enrolled in the school.
+ * Step Definition for verify email feature.
  *
  * @Sanjay testing
  *
@@ -29,22 +26,15 @@ public class VerifyEmail {
   List<String> postsId = new ArrayList<>();
   List<String> emailsId = new ArrayList<>();
 
-  @Given("Users, Posts, comments api is up & running")
-  public void users_posts_comments_api_is_up_running() {
-    // Write code here that turns the phrase above into concrete actions
-
-  }
-
-  @When("Search for user with name {string}")
+  @Given("Search for user with name {string}")
   public void search_for_user_with_name(String userName) throws Exception {
     // Write code here that turns the phrase above into concrete actions
 
     Response response = RestResource.getUserDetails(userName);
-
     ObjectMapper mapper = new ObjectMapper();
     Users[] user = mapper.readValue(response.asString(), Users[].class);
+
     userId = user[0].getUserId().toString();
-    System.out.println(userId);
 
   }
 
@@ -54,7 +44,6 @@ public class VerifyEmail {
 
     Response response = RestResource.getPostDetails(userId);
     ObjectMapper mapper = new ObjectMapper();
-
     Posts[] postAll = mapper.readValue(response.asString(), Posts[].class);
 
     for (Posts post : postAll) {
@@ -68,7 +57,6 @@ public class VerifyEmail {
   public void search_for_the_comment_with_post_id() throws Exception {
     // Write code here that turns the phrase above into concrete actions
 
-    System.out.println(postsId.size());
     for (String postId : postsId) {
 
       Response response = RestResource.getCommentDetails(postId);
@@ -76,6 +64,7 @@ public class VerifyEmail {
       Comments[] commentAll = mapper.readValue(response.asString(), Comments[].class);
 
       for (Comments comment : commentAll) {
+
         emailsId.add(comment.getEmail().toString());
       }
 
@@ -88,17 +77,17 @@ public class VerifyEmail {
 
     SoftAssert soft = new SoftAssert();
 
-    System.out.println(emailsId.size());
     for (String emailId : emailsId) {
-      String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@" + "(?:[a-zA-Z0-9-]+\\.)+[a-z"
-          + "A-Z]{2,7}$";
 
-      Pattern pat = Pattern.compile(emailRegex);
+      String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\." + "[a-zA-Z0-9_+&*-]+)*@"
+          + "(?:[a-zA-Z0-9-]+\\.)+[a-z" + "A-Z]{2,7}$";
 
-      soft.assertTrue(pat.matcher(emailId).matches(), "");
-      soft.assertAll();
-
+      Pattern pattern = Pattern.compile(emailRegex);
+      soft.assertTrue(pattern.matcher(emailId).matches(), "Email Id is of Incorrect Format");
     }
+
+    soft.assertAll();
+
   }
 
 }
