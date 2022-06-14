@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.regex.Pattern;
+import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 /**
@@ -36,6 +37,8 @@ public class VerifyEmail {
     prop = PropertiesFileReader.getProperty();
 
     Response response = RestResource.getUserDetails(userName, prop.getProperty("usersPath"));
+    Assert.assertEquals(response.getStatusCode(), 200);
+
     ObjectMapper mapper = new ObjectMapper();
     Users[] user = mapper.readValue(response.asString(), Users[].class);
 
@@ -48,6 +51,8 @@ public class VerifyEmail {
     // Write code here that turns the phrase above into concrete actions
 
     Response response = RestResource.getPostDetails(userId, prop.getProperty("postsPath"));
+    Assert.assertEquals(response.getStatusCode(), 200);
+
     ObjectMapper mapper = new ObjectMapper();
     Posts[] postAll = mapper.readValue(response.asString(), Posts[].class);
 
@@ -65,6 +70,8 @@ public class VerifyEmail {
     for (String postId : postsId) {
 
       Response response = RestResource.getCommentDetails(postId, prop.getProperty("commentPath"));
+      Assert.assertEquals(response.getStatusCode(), 200);
+
       ObjectMapper mapper = new ObjectMapper();
       Comments[] commentAll = mapper.readValue(response.asString(), Comments[].class);
 
