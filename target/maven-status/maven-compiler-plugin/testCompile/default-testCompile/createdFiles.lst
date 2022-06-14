@@ -9,6 +9,7 @@ com\test\pojo\Geo$GeoBuilder.class
 com\test\pojo\Address.class
 com\test\pojo\Comments$CommentsBuilder.class
 com\test\pojo\Users$UsersBuilder.class
+com\test\utility\PropertiesFileReader.class
 com\test\pojo\Company$CompanyBuilder.class
 com\test\pojo\Company.class
 com\test\pojo\Posts$PostsBuilder.class

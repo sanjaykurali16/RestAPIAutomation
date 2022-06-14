@@ -5,12 +5,14 @@ import com.test.pojo.Comments;
 import com.test.pojo.Posts;
 import com.test.pojo.Users;
 import com.test.restapi.RestResource;
+import com.test.utility.PropertiesFileReader;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.regex.Pattern;
 import org.testng.asserts.SoftAssert;
 
@@ -25,12 +27,15 @@ public class VerifyEmail {
   String userId;
   List<String> postsId = new ArrayList<>();
   List<String> emailsId = new ArrayList<>();
+  Properties prop;
 
   @Given("Search for user with name {string}")
   public void search_for_user_with_name(String userName) throws Exception {
     // Write code here that turns the phrase above into concrete actions
 
-    Response response = RestResource.getUserDetails(userName);
+    prop = PropertiesFileReader.getProperty();
+
+    Response response = RestResource.getUserDetails(userName, prop.getProperty("usersPath"));
     ObjectMapper mapper = new ObjectMapper();
     Users[] user = mapper.readValue(response.asString(), Users[].class);
 
@@ -42,7 +47,7 @@ public class VerifyEmail {
   public void search_for_the_post_with_user_id() throws Exception {
     // Write code here that turns the phrase above into concrete actions
 
-    Response response = RestResource.getPostDetails(userId);
+    Response response = RestResource.getPostDetails(userId, prop.getProperty("postsPath"));
     ObjectMapper mapper = new ObjectMapper();
     Posts[] postAll = mapper.readValue(response.asString(), Posts[].class);
 
@@ -59,7 +64,7 @@ public class VerifyEmail {
 
     for (String postId : postsId) {
 
-      Response response = RestResource.getCommentDetails(postId);
+      Response response = RestResource.getCommentDetails(postId, prop.getProperty("commentPath"));
       ObjectMapper mapper = new ObjectMapper();
       Comments[] commentAll = mapper.readValue(response.asString(), Comments[].class);
 

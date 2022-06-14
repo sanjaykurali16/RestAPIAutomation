@@ -21,6 +21,9 @@
 		<selenium.java>4.1.4</selenium.java>
 		<cucumber.java>7.3.4</cucumber.java>
 		<cucumber.testng>7.3.4</cucumber.testng>
+		<fasterxml.jackson>2.13.3</fasterxml.jackson>
+		<lombok>1.18.24</lombok>
+		<rest-assured>5.1.0</rest-assured>
 		<testNGXmlfile>testng.xml</testNGXmlfile>
 	</properties>
 
@@ -79,7 +82,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.1.0</version>
+            <version>${rest-assured}</version>
             <scope>test</scope>
         </dependency>
         
@@ -87,7 +90,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>${lombok}</version>
             <scope>provided</scope>
         </dependency>
         
@@ -95,17 +98,16 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.3</version>
+            <version>${fasterxml.jackson}</version>
         </dependency>
         
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.datatype/jackson-datatype-jdk8 -->
 		<dependency>
     		<groupId>com.fasterxml.jackson.datatype</groupId>
     		<artifactId>jackson-datatype-jdk8</artifactId>
-    		<version>2.13.3</version>
+    		<version>${fasterxml.jackson}</version>
 		</dependency>
-
-        
+      
 	</dependencies>
 
   </project>
